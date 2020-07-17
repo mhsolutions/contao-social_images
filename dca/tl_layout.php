@@ -26,7 +26,7 @@ $GLOBALS['TL_DCA']['tl_layout']['fields']['socialImages'] = array
 	'label'                   => &$GLOBALS['TL_LANG']['tl_layout']['socialImages'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
-	'eval'                    => array('tl_class'=>'clr'),
+	'eval'                    => array('tl_class'=>'clr w50'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
