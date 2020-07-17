@@ -95,7 +95,11 @@ class SocialImages extends \Controller
             $tags[] = '<meta name="twitter:site" content="' . $objLayout->twitterCard_site . '"' . $tagEnd;
         }
 
-        $tags[] = '<meta name="twitter:title" content="' . $objPage->pageTitle . '"' . $tagEnd;
+        if( $objPage->pageTitle) {
+            $tags[] = '<meta name="twitter:title" content="' . $objPage->pageTitle . '"' . $tagEnd;
+        } else {
+            $tags[] = '<meta name="twitter:title" content="' . $objPage->title . '"' . $tagEnd;
+        }
         
         if($objPage->description) {
             $tags[] = '<meta name="twitter:description" content="' . $objPage->description . '"' . $tagEnd;
