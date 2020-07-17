@@ -76,6 +76,35 @@ class SocialImages extends \Controller
     }
 
     /**
+     * Add the twitter card to the page
+     *
+     * @param \PageModel   $objPage
+     * @param \LayoutModel $objLayout
+     */
+    public function addTwitterCard(\PageModel $objPage, \LayoutModel $objLayout)
+    {
+        if (!$objLayout->twitterCard)
+        {
+            return;
+        }
+
+        $tagEnd = ($objPage->outputFormat === 'xhtml') ? ' />' : '>';
+        $tags = ['<meta name="twitter:card" content="summary"' . $tagEnd];
+        
+        if ($objLayout->twitterCard_site) {
+            $tags[] = '<meta name="twitter:site" content="' . $objLayout->twitterCard_site . '"' . $tagEnd;
+        }
+
+        $tags[] = '<meta name="twitter:title" content="' . $objPage->pageTitle . '"' . $tagEnd;
+        
+        if($objPage->description) {
+            $tags[] = '<meta name="twitter:description" content="' . $objPage->description . '"' . $tagEnd;
+        }
+
+        $GLOBALS['TL_HEAD'][] = implode("\n", $tags);
+    }
+
+    /**
      * Generate the image URL
      *
      * @param string $image

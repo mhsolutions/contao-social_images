@@ -31,5 +31,6 @@ $GLOBALS['SOCIAL_IMAGES_CE'] = array('text', 'image', 'gallery', 'player', 'yout
 $GLOBALS['TL_HOOKS']['getAllEvents'][] = array('SocialImages', 'collectEventImages');
 $GLOBALS['TL_HOOKS']['getContentElement'][] = array('SocialImages', 'collectContentElementImages');
 $GLOBALS['TL_HOOKS']['generatePage'][] = array('SocialImages', 'addSocialImages');
+$GLOBALS['TL_HOOKS']['generatePage'][] = array('SocialImages', 'addTwitterCard');
 $GLOBALS['TL_HOOKS']['parseArticles'][] = array('SocialImages', 'collectNewsImages');
 $GLOBALS['TL_HOOKS']['getPageLayout'][] = array('SocialImages', 'collectPageImages');
