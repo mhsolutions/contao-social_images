@@ -26,4 +26,4 @@ $GLOBALS['TL_LANG']['tl_layout']['twitterCard_site'] = array('Username', 'The Tw
  * Legends
  */
 $GLOBALS['TL_LANG']['tl_layout']['socialImages_legend'] = 'Social images';
-$GLOBALS['TL_LANG']['tl_layout']['twitterCard_legend'] = 'Social images';
+$GLOBALS['TL_LANG']['tl_layout']['twitterCard_legend'] = 'Twitter card';
