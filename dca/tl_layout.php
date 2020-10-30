@@ -20,7 +20,7 @@ $GLOBALS['TL_DCA']['tl_layout']['palettes']['default'] .= ';{socialImages_legend
 /**
  * Extend tl_layout __selector__
  */
-$GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'] = array('socialImages', 'twitterCard');
+$GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'] = array_merge($GLOBALS['TL_DCA']['tl_layout']['palettes']['__selector__'], array('socialImages', 'twitterCard'));
 $GLOBALS['TL_DCA']['tl_layout']['subpalettes']['socialImages'] = 'socialImages_limit,socialImages_size,socialImages_resize';
 $GLOBALS['TL_DCA']['tl_layout']['subpalettes']['twitterCard'] = 'twitterCard_site';
 
